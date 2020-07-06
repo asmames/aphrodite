@@ -1,0 +1,122 @@
+
+:root {
+    --space: 1.5rem;
+}
+
+*,*::before, ::after {
+    box-sizing: border-box;
+}
+
+body{
+   
+    background: ghostwhite;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    color:rgba(0, 0, 0,0.6);
+    margin: 0;
+    line-height: 1.4;
+    padding: 1px;
+}
+
+a{
+    color: white;
+}
+.topbar {
+    background: #2c3e50;
+    color: #f1f1f1;
+    
+}
+.topbar a{
+    text-decoration: none;
+
+
+}
+.topbar-logo {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    padding: 11px 0;
+    
+}
+.topbar-nav{
+    text-align: center;
+    padding-bottom: 16px;
+    line-height: 2;
+}
+.topbar-nav a{
+    display: inline-block;
+    margin: 0 12px;
+    color: rgba(255, 255, 255, 0.67);
+    transition: color .3s;
+
+}
+.topbar-nav a:hover,
+.topbar-nav a.active {
+
+    color: #FFF;
+}
+    
+@media only screen and (min-width:600px) {
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px ;
+        padding: 0 25px;
+    }
+    .topbar-logo,
+    .topbar-nav{
+        padding: 0;
+    }
+    .topbar-nav a{
+        margin: 0 20px;
+
+    }
+    .stack > * * * {
+        margin-top: var(--space);
+    }
+    h1 {
+        font-size: 2rem;
+        color: #000;
+        line-height: 1.1;
+        margin: 0;
+    }
+    .sections {
+        --space:100px;
+    }
+   section {
+       padding-left: 50px;
+       padding-right: 50px;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-gap: 1.5rem;
+       
+   }
+    section:nth-child(2n) > *:first-child {
+        order: 2;
+    }
+    .colored {
+        padding-top:calc(var(--space) + 0.5) ;
+        padding-bottom:calc(var(--space) + 0.5) ;
+        background-color: ghostwhite;
+    }
+    .stack > * + .colored {
+        margin-top:calc(var(--space) + 0.5) ;
+    }
+    .colored + .colored {
+        margin-top: 0;
+    }
+    .flex{
+        display: flex;
+    }
+    .f-col {
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:pink;
+   color: white;
+   text-align: center;
+    }
+    
+    
